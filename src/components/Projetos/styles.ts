@@ -40,7 +40,7 @@ export const LineProject = styled.div`
 
 `
 
-export const ContainerTask = styled.button`
+export const ContainerTask = styled.a`
     display: flex;
     flex-direction: column;
 
@@ -51,6 +51,10 @@ export const ContainerTask = styled.button`
     width: 14.25rem;
 
     transition: 0.2s;
+
+    cursor: pointer;
+
+    text-decoration: none;
 
     
 

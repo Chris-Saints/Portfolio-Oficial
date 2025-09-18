@@ -61,6 +61,7 @@ export const AnchorSocial = styled.a`
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 
     background: ${props => props.theme['--gray-500']};
 
@@ -75,10 +76,12 @@ export const AnchorSocial = styled.a`
 
     transition: 0.2s;
 
-    &:hover {
-        color: ${props => props.theme['--yellow']};
+    img{
+        height: 24px;
+        width: 24px;
     }
 `
+
 
 export const ContainerButton = styled.div`
     display: flex;

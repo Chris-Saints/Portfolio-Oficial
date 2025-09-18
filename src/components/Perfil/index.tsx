@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { AnchorSocial, BasePerfil, ButtonContato, ButtonCV, ContainerButton, DivInfo, ImgPerfil, NavSocial } from "./styles";
 
+
 export function Perfil() {
     const navigate = useNavigate()
 
@@ -19,9 +20,19 @@ export function Perfil() {
             </DivInfo>
 
             <NavSocial>
-                <AnchorSocial>Git</AnchorSocial>
-                <AnchorSocial>Link</AnchorSocial>
-                <AnchorSocial>Insta</AnchorSocial>
+
+                <AnchorSocial href="https://github.com/Chris-Saints">
+                    Git
+                </AnchorSocial>
+
+                <AnchorSocial href="https://www.linkedin.com/in/christian-picoli-961897344">
+                    Link
+                </AnchorSocial>
+
+                <AnchorSocial href="https://www.instagram.com/picolisev/?igsh=MTVwdXZhNjI4cnY4cQ%3D%3D">
+                    Insta
+                </AnchorSocial>
+
             </NavSocial>
 
             <ContainerButton>
