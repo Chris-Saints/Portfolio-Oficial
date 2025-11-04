@@ -77,8 +77,13 @@ export const AnchorSocial = styled.a`
     transition: 0.2s;
 
     img{
-        height: 24px;
-        width: 24px;
+        height: 32px;
+        width: 32px;
+        border-radius: 6px;
+    }
+
+    &:hover {
+        background: ${props => props.theme['--yellow']};
     }
 `
 

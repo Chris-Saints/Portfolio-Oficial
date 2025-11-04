@@ -1,4 +1,10 @@
 import { ButtonContato, ButtonIcone, ButtonSobre, ContainerBase, ContainerButton, ContainerExp, ContainerInfo, ContainerProjetos, MainContainer } from "./styles";
+import CSSLogo from "../../assets/css.png"
+import HTMLLogo from "../../assets/html.png"
+import TypeLogo from "../../assets/Typescript.png"
+import FigmaLogo from "../../assets/figma.png"
+import ReactLogo from "../../assets/React-Logo.png"
+
 
 export function Home() {
 
@@ -13,11 +19,11 @@ export function Home() {
             <ContainerInfo>
                 <ContainerExp>
                     <div>
-                        <ButtonIcone>F</ButtonIcone>
-                        <ButtonIcone>F</ButtonIcone>
-                        <ButtonIcone>F</ButtonIcone>
-                        <ButtonIcone>F</ButtonIcone>
-                        <ButtonIcone>F</ButtonIcone>
+                        <ButtonIcone><img src={HTMLLogo} alt="Logo HTML"/></ButtonIcone>
+                        <ButtonIcone><img src={CSSLogo} alt="Logo CSS" /></ButtonIcone>
+                        <ButtonIcone><img src={TypeLogo} alt="Logo Typescript" /></ButtonIcone>
+                        <ButtonIcone><img src={FigmaLogo} alt="Logo Figma" /></ButtonIcone>
+                        <ButtonIcone><img src={ReactLogo} alt="Logo React" /></ButtonIcone>
                     </div>
 
                     <h2>ESPECIALIZAÇÕES</h2>

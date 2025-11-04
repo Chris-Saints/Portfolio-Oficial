@@ -73,6 +73,9 @@ export const ContainerInfo = styled.section`
 
 export const ButtonIcone = styled.button`
     background: ${props => props.theme['--gray-500']};
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     height: 120px;
     width: 120px;
@@ -87,6 +90,12 @@ export const ButtonIcone = styled.button`
 
     &:hover{
         transform: scale(1.1);
+    }
+
+    img {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 8px;
     }
 `
 
