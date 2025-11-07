@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import SobreBack from "../../assets/wallpapersobre.avif"
 
 export const MainContainer = styled.main`
     display: flex;
@@ -135,11 +134,8 @@ export const ButtonContato = styled.button`
 export const ButtonSobre = styled.button`
     display: flex;
     align-items: end;
-    background-image: url(${SobreBack});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: ${props => props.theme['--white']};
+    background: ${props => props.theme['--yellow']};
+    color: ${props => props.theme[' --dark-gray']};
 
     width: 277px;
     height: 180px;

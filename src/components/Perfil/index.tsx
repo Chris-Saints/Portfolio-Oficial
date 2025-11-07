@@ -39,7 +39,7 @@ export function Perfil() {
 
             <ContainerButton>
                 <ButtonContato href="mailto:christianpicoli18@gmail.com">Contate-me!</ButtonContato>
-                <a href="/public/CurriculoChristian.pdf" download="Curriculo-Christian.pdf">
+                <a href="/CurriculoChristian.pdf" download="Curriculo-Christian.pdf">
                     <ButtonCV>Download CV</ButtonCV>
                 </a>
 
