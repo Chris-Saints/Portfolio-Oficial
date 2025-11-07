@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { AnchorSocial, BasePerfil, ButtonContato, ButtonCV, ContainerButton, DivInfo, ImgPerfil, NavSocial } from "./styles";
 import FotoPerfil from "../../assets/Foto1.jpg"
 import InstagramLogo from "../../assets/instragam.webp"
@@ -8,7 +7,6 @@ import GithubLogo from "../../assets/GitHub.png"
 
 
 export function Perfil() {
-    const navigate = useNavigate()
 
     return (
         <BasePerfil>
@@ -21,7 +19,6 @@ export function Perfil() {
 
             <DivInfo>
                 <p>christianpicoli18@gmail.com</p>
-                <p>+55 (11) 95889-0338</p>
             </DivInfo>
 
             <NavSocial>
@@ -41,8 +38,11 @@ export function Perfil() {
             </NavSocial>
 
             <ContainerButton>
-                <ButtonContato onClick={() => navigate("/Contato")}>Contate-me!</ButtonContato>
-                <ButtonCV>Download CV</ButtonCV>
+                <ButtonContato href="mailto:christianpicoli18@gmail.com">Contate-me!</ButtonContato>
+                <a href="/public/CurriculoChristian.pdf" download="Curriculo-Christian.pdf">
+                    <ButtonCV>Download CV</ButtonCV>
+                </a>
+
             </ContainerButton> 
         </BasePerfil>
     )

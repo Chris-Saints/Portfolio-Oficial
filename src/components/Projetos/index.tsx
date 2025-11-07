@@ -6,6 +6,7 @@ import FundamentosIgnite from "../../assets/fundamentos-ignite.png"
 import ToDoList from "../../assets/to-do-List.png"
 import AssistenteIA from "../../assets/assistente-ia-gemini.png"
 import DtMoney from "../../assets/dt-money.png"
+import EmObra from "../../assets/emobras.jpg"
 
 export function Projetos() {
     return (
@@ -61,21 +62,21 @@ export function Projetos() {
                 <ContainerTask href="https://03-dt-money-rocket-seat.vercel.app">
                     <img src={DtMoney} alt="Thumb do Site Dt-Money"/>
                     <div>
-                        <h3>Dt-money</h3>
+                        <h3>Dt-Money</h3>
                     </div>
                 </ContainerTask>
 
-                <ContainerTask>
-                    <img />
+                <ContainerTask href="#">
+                    <img src={EmObra} alt="wallpaper amarelo e preto"/>
                     <div>
-                        <h3>FastTask</h3>
+                        <h3>Em Obra</h3>
                     </div>
                 </ContainerTask> 
 
-                <ContainerTask>
-                    <img />
+                <ContainerTask href="#">
+                    <img src={EmObra} alt="wallpaper amarelo e preto" />
                     <div>
-                        <h3>FastTask</h3>
+                        <h3>Em Obra</h3>
                     </div>
                 </ContainerTask>  
             </LineProject>

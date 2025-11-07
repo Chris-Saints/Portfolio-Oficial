@@ -1,18 +1,16 @@
 
-import { useNavigate } from "react-router-dom";
-import { BaseHeader, LogoHeader, NavButtonHeader, NavHeader, ThemeButton } from "./styles";
+import { BaseHeader, LogoHeader, NavHeader, NavItem, ThemeButton } from "./styles";
 
 export function Header() {
-    const navigate = useNavigate()
 
     return (
         <BaseHeader>
             <LogoHeader  />
 
             <NavHeader>
-                <NavButtonHeader onClick={() => navigate("/")}>Home</NavButtonHeader>
-                <NavButtonHeader onClick={() => navigate("/sobre")}>Sobre</NavButtonHeader>
-                <NavButtonHeader onClick={() => navigate("/projetos")}>Projetos</NavButtonHeader>
+                <NavItem to="/" end>Home</NavItem>
+                <NavItem to="/sobre" >Sobre</NavItem>
+                <NavItem to="/projetos">Projetos</NavItem>
             </NavHeader>
 
             <ThemeButton></ThemeButton>

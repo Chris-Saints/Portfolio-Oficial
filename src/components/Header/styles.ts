@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const BaseHeader = styled.header`
@@ -15,7 +16,27 @@ export const BaseHeader = styled.header`
     padding: 1rem 1rem;
 `
 
-export const LogoHeader = styled.img`
+export const NavItem = styled(NavLink)`
+    border: 0;
+    background: transparent;
+    color: ${props => props.theme['--light-gray']};
+    font-weight: 700;
+
+    transition: 0.2s;
+    text-decoration: none;
+
+
+    &:hover {
+        color: ${props => props.theme['--yellow']};
+    }
+
+    &.active {
+        color: ${props => props.theme["--yellow"]};
+    }
+
+`
+
+export const LogoHeader = styled.div`
     background: ${props => props.theme['--yellow']};
     height: 20px;
     width: 20px;
@@ -29,21 +50,7 @@ export const NavHeader = styled.nav`
     gap: 3rem;
 `
 
-export const NavButtonHeader = styled.button`
-    border: 0;
-    background: transparent;
-    color: ${props => props.theme['--light-gray']};
-    font-weight: 700;
-
-    transition: 0.2s;
-
-    &:hover {
-        color: ${props => props.theme['--yellow']};
-    }
-
-`
-
-export const ThemeButton = styled.button`
+export const ThemeButton = styled.div`
     border: 0;
     background: ${props => props.theme['--yellow']};
     height: 20px;

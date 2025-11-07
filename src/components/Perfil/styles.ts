@@ -96,22 +96,33 @@ export const ContainerButton = styled.div`
     gap: 1rem;
 
     width: 14rem;
+
+    a{
+        width: 100%;
+    }
 `
 
-export const ButtonContato = styled.button`
+export const ButtonContato = styled.a`
 
     background: ${props => props.theme['--yellow']};
+    color: ${props => props.theme[' --dark-gray']};
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     padding: 0.59rem;
     border: solid 0.31rem ${props => props.theme['--yellow']};
     border-radius: 8px;
 
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
 
     width: 100%;
 
     transition: 0.2s;
+
+    cursor: pointer;
 
     &:hover {
         background: ${props => props.theme[' --dark-gray']};

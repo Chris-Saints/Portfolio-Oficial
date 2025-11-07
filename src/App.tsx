@@ -8,7 +8,6 @@ import { DivPrincipal } from "./styles";
 import { Route, Routes } from "react-router-dom";
 import { Sobre } from "./components/Sobre";
 import { Projetos } from "./components/Projetos";
-import { Contato } from "./components/Contato";
 import { Footer } from "./components/Footer";
 
 export function App() {
@@ -22,7 +21,6 @@ export function App() {
           <Route path="/" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/projetos" element={<Projetos />} />
-          <Route path="/contatos" element={<Contato />} />
         </Routes>
       </DivPrincipal>
       <Footer />
