@@ -11,5 +11,9 @@ export const FooterBase = styled.div`
     max-width: auto;
     width: 100%;
 
+    @media (max-width: 480px) {
+        margin-bottom: 4rem;
+    }
+
 
 `

@@ -21,6 +21,16 @@ export const BaseHeader = styled.header`
         width: 94%;
         margin: 2rem 10.3rem 2rem;
     }
+
+    @media (max-width: 480px) {
+        margin: 0;
+        width: 100vw;
+        border-radius: 0;
+
+        border-top: solid 4px ${props => props.theme['--yellow']};
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
 `
 
 export const NavItem = styled(NavLink)`

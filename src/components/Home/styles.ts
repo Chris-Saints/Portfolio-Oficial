@@ -13,7 +13,12 @@ export const MainContainer = styled.main`
     @media (max-width: 1280px) {
         max-width: 610px;
     }
-`
+
+    @media (max-width: 480px) {
+        max-width: 100vw;
+        width: 90%;
+    }
+` 
 
 export const ContainerBase = styled.section`
     display: flex;
@@ -38,6 +43,18 @@ export const ContainerBase = styled.section`
         font-size: 50px;
     }
 
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 55px;
+            line-height: 1;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+    }
+
 `
 
 export const ContainerExp = styled.div`
@@ -57,13 +74,24 @@ export const ContainerExp = styled.div`
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 1.5rem;
+        gap: 1rem;
 
         margin-bottom: 1rem ;
     }
     
     h2{
         font-size: 40px;
+    }
+    
+    @media (max-width: 480px) {
+        padding-top: 0.5rem ;
+        padding-bottom: 1rem;
+        align-items: center;
+
+        h2 {
+            order: -1;
+            font-size: 52px;
+        }
     }
 
 `
@@ -104,6 +132,17 @@ export const ButtonIcone = styled.div`
         width: 4rem;
         border-radius: 8px;
     }
+
+    @media (max-width: 480px) {
+
+        height: 150px;
+        width: 150px;
+
+        img {
+            height: 5rem;
+            width: 5rem;
+        }
+    }
 `
 
 export const ContainerButton = styled.div`
@@ -115,6 +154,10 @@ export const ContainerButton = styled.div`
     @media (max-width: 1280px) {
         flex-direction: row;
         gap: 0;
+    }
+
+    @media (max-width: 480px) {
+        display: none;
     }
 
 `
@@ -143,7 +186,6 @@ export const ButtonContato = styled.button`
         scale: 1.1;
         opacity:95%;
     }
-
 
 `
 
@@ -174,8 +216,6 @@ export const ButtonSobre = styled.button`
         scale: 1.1;
         opacity:90%;
     }
-
-
 `
 
 export const ContainerProjetos = styled.section`
@@ -195,6 +235,12 @@ export const ContainerProjetos = styled.section`
         letter-spacing: 0.5rem;
     }
 
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 55px;
+        }
+    }
+
 `
 
 export const ContainerSlider = styled.section`
@@ -203,6 +249,13 @@ export const ContainerSlider = styled.section`
     position: relative;
     background: ${props => props.theme['--gray-500']};
     border-radius: 6px;
+
+    @media (max-width: 480px) {
+        height: 15rem;
+        display: flex;
+        align-items: center;
+
+    }
 `
 
 export const BotaoEsquerdo = styled.button`
@@ -259,6 +312,7 @@ export const Slider = styled.div<SliderProps>`
 
     padding: 1rem ;
 
+
 `
 
 export const Item = styled.div`
@@ -295,6 +349,11 @@ export const Item = styled.div`
         border-right:  solid 3px ${props => props.theme['--yellow']};
         border-left:  solid 3px ${props => props.theme['--yellow']};
     }
+
+    @media (max-width: 480px) {
+        width: 100%;
+
+    }
 `
 
 export const MoreProjects = styled.button`
@@ -314,6 +373,15 @@ export const MoreProjects = styled.button`
     &:hover {
         color: ${props => props.theme['--yellow']};
         background: ${props => props.theme[' --dark-gray']};
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+
+        &:hover {
+            color: ${props => props.theme[' --dark-gray']};
+            background: ${props => props.theme['--yellow']}; 
+        }
     }
 `
 

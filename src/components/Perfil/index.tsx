@@ -15,10 +15,9 @@ export function Perfil() {
             <DivInfo>
                 <h2>CHRISTIAN PICOLI</h2>
                 <p>Front-End Developer</p>
-            </DivInfo>
-
-            <DivInfo>
-                <p>christianpicoli18@gmail.com</p>
+                <div>
+                    <p>christianpicoli18@gmail.com</p>
+                </div>
             </DivInfo>
 
             <NavSocial>

@@ -10,9 +10,6 @@ export const BasePerfil = styled.div`
     align-items: center;
     justify-content: space-between;
 
-
-
-
     max-width: 500px;
 
     padding: 2rem 3.5rem;
@@ -21,23 +18,37 @@ export const BasePerfil = styled.div`
         max-width: 250px;
     }
 
+    @media (max-width: 480px) {
+        justify-content: center;
+        max-width: 100vw;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        padding: 0;
+    }
+
 `
 
 
 export const ImgPerfil = styled.img`
-    background: #f379b2;
     height: 150px;
     width: 150px;
 
     outline: solid 5px ${props => props.theme['--yellow']};
     border: solid 5px ${props => props.theme[' --dark-gray']};
-    border-radius: 75px;
+    border-radius: 100%;
 
     margin-bottom: 1rem;
 
     @media (max-width: 1280px) {
         width: 180px;
         height: 180px;
+    }
+
+    @media (max-width: 480px){
+        width: 220px;
+        height: 220px;
+        border-radius: 100% ;
     }
 `
 
@@ -59,6 +70,10 @@ export const DivInfo = styled.div`
         font-weight: 500;
     }
 
+    div {
+        margin: 2rem 0 0;
+    }
+
     @media (max-width: 1280px) {
         h2 {
             font-size: 19px;
@@ -66,6 +81,20 @@ export const DivInfo = styled.div`
 
         p {
             font-size: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h2{
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        div{
+            margin-top: 0;
         }
     }
 `
@@ -76,6 +105,10 @@ export const NavSocial = styled.nav`
 
     @media (max-width: 1280px) {
         gap: 1rem;
+    }
+
+    @media (max-width: 480px) {
+        gap: 2rem;
     }
 `
 
@@ -107,6 +140,18 @@ export const AnchorSocial = styled.a`
     &:hover {
         background: ${props => props.theme['--yellow']};
     }
+
+    @media (max-width: 480px) {
+        background: ${props => props.theme['--yellow']};
+
+        height: 80px;
+        width: 80px;
+
+        img {
+            height: 55px;
+            width: 55px;
+        }
+    }
 `
 
 
@@ -126,6 +171,14 @@ export const ContainerButton = styled.div`
     @media (max-width: 1280px) {
         a {
             width: 93%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        width: 20rem;
+        a {
+            text-decoration: none;
+            width: 100;
         }
     }
 
@@ -158,7 +211,9 @@ export const ButtonContato = styled.a`
         font-weight: 600;
     }
 
-
+     @media (max-width: 480px) {
+        display: none;
+     }
 
 `
 
@@ -178,5 +233,28 @@ export const ButtonCV = styled.button`
         background: ${props => props.theme[' --dark-gray']};
         border: solid 0.31rem ${props => props.theme['--gray-500']};
         font-weight: 600;
+    }
+
+    @media (max-width: 480px) {
+        background: ${props => props.theme[' --dark-gray']};
+        color: ${props => props.theme['--yellow']};
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 1rem 1;
+        border: solid 0.31rem ${props => props.theme['--yellow']};
+        border-radius: 30px;
+        margin: 0;
+        height: 100px;
+
+        font-size: 30px;
+        font-weight: bold;
+
+        transition: 0.2s;
+
+        cursor: pointer;
+
+        margin-bottom: 2rem;
     }
 `

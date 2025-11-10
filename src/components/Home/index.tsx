@@ -48,7 +48,23 @@ export function Home() {
             img: CardsRpg
         }
     ]
-    const visible = 3;
+
+    const [visible, setVisible] = useState(3);
+
+    useEffect(() => {
+        function updateVisible() {
+            if(window.innerWidth <= 480) {
+                setVisible(1);
+            } else {
+                setVisible(3)
+            }
+        }
+
+        updateVisible();
+        window.addEventListener("resize", updateVisible);
+        return () => window.removeEventListener("resize", updateVisible)
+    }, [])
+
     const maxIndex = projetos.length - visible
 
     useEffect(() => {
