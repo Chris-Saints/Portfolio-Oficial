@@ -7,5 +7,9 @@ export const FooterBase = styled.div`
     font-size: 2rem;
     font-weight: bold;
     background: ${props => props.theme[' --dark-gray']};
-    height: 9.1rem;
+    height: 5.1rem;
+    max-width: auto;
+    width: 100%;
+
+
 `

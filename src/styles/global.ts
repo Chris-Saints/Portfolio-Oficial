@@ -10,6 +10,9 @@ export const GlobalStyle = createGlobalStyle`
     body {
         background: ${props => props.theme['--gray']};
         color: ${props => props.theme['--white']};
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     body, textarea, input, button {

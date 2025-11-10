@@ -19,6 +19,10 @@ export const Containerbase = styled.main`
         font-size: 40px;
 
     }
+
+    @media (max-width: 1280px) {
+        max-width: 610px;
+    }
 `
 
 

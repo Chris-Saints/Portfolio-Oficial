@@ -8,6 +8,11 @@ export const MainContainer = styled.main`
     padding-bottom: 3rem;
 
     gap: 2rem;
+    
+
+    @media (max-width: 1280px) {
+        max-width: 610px;
+    }
 `
 
 export const ContainerBase = styled.section`
@@ -69,6 +74,10 @@ export const ContainerInfo = styled.section`
 
     gap: 2rem;
 
+    @media (max-width: 1280px) {
+        flex-direction: column;
+    }
+
 `
 
 export const ButtonIcone = styled.div`
@@ -103,6 +112,11 @@ export const ContainerButton = styled.div`
     justify-content: space-between;
     gap: 2rem;
 
+    @media (max-width: 1280px) {
+        flex-direction: row;
+        gap: 0;
+    }
+
 `
 
 export const ButtonContato = styled.button`
@@ -129,6 +143,8 @@ export const ButtonContato = styled.button`
         scale: 1.1;
         opacity:95%;
     }
+
+
 `
 
 export const ButtonSobre = styled.button`
@@ -158,6 +174,8 @@ export const ButtonSobre = styled.button`
         scale: 1.1;
         opacity:90%;
     }
+
+
 `
 
 export const ContainerProjetos = styled.section`

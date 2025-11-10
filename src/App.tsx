@@ -4,7 +4,7 @@ import { GlobalStyle } from "./styles/global";
 import { Header } from "./components/Header";
 import { Perfil } from "./components/Perfil";
 import { Home } from "./components/Home";
-import { DivPrincipal } from "./styles";
+import { ContainerFooter, ContainerHeader, DivPrincipal } from "./styles";
 import { Route, Routes } from "react-router-dom";
 import { Sobre } from "./components/Sobre";
 import { Projetos } from "./components/Projetos";
@@ -14,7 +14,9 @@ export function App() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Header />
+      <ContainerHeader>
+        <Header />
+      </ContainerHeader>
       <DivPrincipal>
         <Perfil />
         <Routes>
@@ -23,7 +25,9 @@ export function App() {
           <Route path="/projetos" element={<Projetos />} />
         </Routes>
       </DivPrincipal>
-      <Footer />
+      <ContainerFooter>
+        <Footer />
+      </ContainerFooter>
       <GlobalStyle />
     </ThemeProvider>
 

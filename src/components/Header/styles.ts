@@ -9,11 +9,18 @@ export const BaseHeader = styled.header`
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
+    width: 65.8%;
 
     border-radius: 8px;
 
-    margin: 2rem 20rem 2.5rem 20rem;
+    margin: 2rem 0 2.5rem 20rem; 
     padding: 1rem 1rem;
+
+    @media (max-width: 1280px) {
+        max-width: 900px;
+        width: 94%;
+        margin: 2rem 10.3rem 2rem;
+    }
 `
 
 export const NavItem = styled(NavLink)`

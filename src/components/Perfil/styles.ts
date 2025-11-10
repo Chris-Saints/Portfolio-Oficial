@@ -17,6 +17,10 @@ export const BasePerfil = styled.div`
 
     padding: 2rem 3.5rem;
 
+    @media (max-width: 1280px) {
+        max-width: 250px;
+    }
+
 `
 
 
@@ -31,6 +35,10 @@ export const ImgPerfil = styled.img`
 
     margin-bottom: 1rem;
 
+    @media (max-width: 1280px) {
+        width: 180px;
+        height: 180px;
+    }
 `
 
 export const DivInfo = styled.div`
@@ -50,11 +58,25 @@ export const DivInfo = styled.div`
     p{
         font-weight: 500;
     }
+
+    @media (max-width: 1280px) {
+        h2 {
+            font-size: 19px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
 `
 
 export const NavSocial = styled.nav`
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
+
+    @media (max-width: 1280px) {
+        gap: 1rem;
+    }
 `
 
 export const AnchorSocial = styled.a`
@@ -100,6 +122,13 @@ export const ContainerButton = styled.div`
     a{
         width: 100%;
     }
+
+    @media (max-width: 1280px) {
+        a {
+            width: 93%;
+        }
+    }
+
 `
 
 export const ButtonContato = styled.a`
@@ -110,15 +139,13 @@ export const ButtonContato = styled.a`
     justify-content: center;
     align-items: center;
 
-    padding: 0.59rem;
+    padding: 0.59rem 0;
     border: solid 0.31rem ${props => props.theme['--yellow']};
     border-radius: 8px;
 
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
-
-    width: 100%;
 
     transition: 0.2s;
 
@@ -130,6 +157,9 @@ export const ButtonContato = styled.a`
         border: solid 0.31rem ${props => props.theme['--yellow']};
         font-weight: 600;
     }
+
+
+
 `
 
 export const ButtonCV = styled.button`
@@ -140,6 +170,7 @@ export const ButtonCV = styled.button`
     padding: 0.59rem;
     border: solid 0.31rem ${props => props.theme['--gray-500']};;
     width: 100%;
+    font-weight: 600;
 
     transition: 0.2s;
 
