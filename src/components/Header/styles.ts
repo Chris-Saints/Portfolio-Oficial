@@ -56,8 +56,12 @@ export const NavItem = styled(NavLink)`
     }
 
     @media (max-width: 480px) {
-        border-radius: 8px;
-        border: solid 2px ${props => props.theme["--yellow"]};;
+
+        &:active {
+            border-radius: 8px;
+            order: solid 2px ${props => props.theme["--yellow"]};
+        }
+
     }
 
 `
