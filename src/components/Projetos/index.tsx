@@ -80,18 +80,16 @@ export function Projetos() {
                     </div>
                 </ContainerTask>
 
-                <Line />
+                {/* Molde dos proximos projetos */}
 
-                <ContainerTask href="#">
+                <ContainerTask id="obra" href="#">
                     <img src={EmObra} alt="wallpaper amarelo e preto"/>
                     <div>
                         <h3>Em Obra</h3>
                     </div>
                 </ContainerTask> 
 
-                <Line />
-
-                <ContainerTask href="#">
+                <ContainerTask id="obra" href="#">
                     <img src={EmObra} alt="wallpaper amarelo e preto" />
                     <div>
                         <h3>Em Obra</h3>

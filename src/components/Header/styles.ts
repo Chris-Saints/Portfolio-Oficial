@@ -30,6 +30,10 @@ export const BaseHeader = styled.header`
         border-top: solid 4px ${props => props.theme['--yellow']};
         border-top-right-radius: 8px;
         border-top-left-radius: 8px;
+
+        font-size: 18px;
+        box-shadow: 0 -10px 20px black;
+
     }
 `
 
@@ -49,6 +53,11 @@ export const NavItem = styled(NavLink)`
 
     &.active {
         color: ${props => props.theme["--yellow"]};
+
+        padding: 0 1rem;
+
+        border-radius: 8px;
+        border: solid 2px ${props => props.theme["--yellow"]};;
     }
 
 `
@@ -74,3 +83,4 @@ export const ThemeButton = styled.div`
     width: 20px;
     border-radius: 10px;
 `
+

@@ -31,11 +31,25 @@ export const ContainerBase = styled.section`
     p{
         color: ${props => props.theme['--light-gray']};
     }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 55px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
 `
 
 export const SectionExpForm = styled.section`
     display: flex;
     gap: 2rem;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
 `
 
 export const ContainerBaseExpForm = styled.div`
@@ -55,6 +69,12 @@ export const ContainerBaseExpForm = styled.div`
     h2{
         font-size: 30px;
     }
+
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 55px;
+        }
+    }
 `
 
 export const ContainerExpFormacao = styled.div`
@@ -63,6 +83,13 @@ export const ContainerExpFormacao = styled.div`
     p {
         color: ${props => props.theme['--light-gray']};
     }
+
+    @media (max-width: 480px) {
+        p {
+            font-size: 18px;
+        }
+    }
+
 `
 
 export const ContainerEspecializacao = styled.div`
@@ -83,6 +110,13 @@ export const ContainerEspecializacao = styled.div`
     span {
         font-weight: 900;
     }
+
+    @media (max-width: 480px) {
+        p {
+            font-size: 22px;
+        }
+    }
+
 `
 
 export const ContainerEspecializacaoBase = styled.section`
@@ -104,5 +138,13 @@ export const ContainerEspecializacaoBase = styled.section`
 
     h2{
         font-size: 30px;
+    }
+
+    @media (max-width: 480px) {
+        padding-bottom: 3rem;
+
+        h2 {
+            font-size: 55px;
+        }
     }
 `

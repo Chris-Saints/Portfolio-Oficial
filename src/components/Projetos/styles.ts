@@ -56,6 +56,10 @@ export const LineProject = styled.div`
     @media (max-width: 480px) {
 
         flex-direction: column;
+
+        #obra {
+            display: none;
+        }
     }
 
 `

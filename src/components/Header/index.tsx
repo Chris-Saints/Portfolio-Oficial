@@ -1,4 +1,3 @@
-
 import { BaseHeader, LogoHeader, NavHeader, NavItem, ThemeButton } from "./styles";
 
 export function Header() {

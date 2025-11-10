@@ -211,9 +211,9 @@ export const ButtonContato = styled.a`
         font-weight: 600;
     }
 
-     @media (max-width: 480px) {
+    @media (max-width: 480px) {
         display: none;
-     }
+    }
 
 `
 

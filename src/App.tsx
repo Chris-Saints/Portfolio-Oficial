@@ -4,11 +4,12 @@ import { GlobalStyle } from "./styles/global";
 import { Header } from "./components/Header";
 import { Perfil } from "./components/Perfil";
 import { Home } from "./components/Home";
-import { ContainerFooter, ContainerHeader, DivPrincipal } from "./styles";
+import { ContainerFooter, ContainerHeader, ContatoFixed, DivPrincipal } from "./styles";
 import { Route, Routes } from "react-router-dom";
 import { Sobre } from "./components/Sobre";
 import { Projetos } from "./components/Projetos";
 import { Footer } from "./components/Footer";
+import { Envelope } from "phosphor-react";
 
 export function App() {
 
@@ -17,6 +18,7 @@ export function App() {
       <ContainerHeader>
         <Header />
       </ContainerHeader>
+
       <DivPrincipal>
         <Perfil />
         <Routes>
@@ -25,9 +27,13 @@ export function App() {
           <Route path="/projetos" element={<Projetos />} />
         </Routes>
       </DivPrincipal>
+
+      <ContatoFixed href="mailto:christianpicoli18@gmail.com"><Envelope color={"black"} size={40} /></ContatoFixed>
+
       <ContainerFooter>
         <Footer />
       </ContainerFooter>
+
       <GlobalStyle />
     </ThemeProvider>
 

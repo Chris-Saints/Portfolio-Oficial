@@ -44,3 +44,26 @@ export const ContainerFooter = styled.div`
     align-items: center;
     width: auto;
 `
+
+export const ContatoFixed = styled.a`
+        position: fixed;
+        bottom: 5rem;
+        right: 1rem;
+
+        border-radius: 100%;
+
+        background: ${props => props.theme['--yellow']};
+        height: 70px;
+        width: 70px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 20px black;
+        z-index: 9999;
+        
+ 
+    @media (min-width: 769px) {
+        display: none;
+    }
+`
