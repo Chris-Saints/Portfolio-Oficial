@@ -1,4 +1,4 @@
-import { Containerbase, ContainerTask, LineProject } from "./styles";
+import { Containerbase, ContainerTask, Line, LineProject } from "./styles";
 import TimerIgnite from "../../assets/timer-ignite.png"
 import CartasRPG from "../../assets/cartas-rpg.png"
 import ChessMaster from "../../assets/chess-master.png"
@@ -20,6 +20,8 @@ export function Projetos() {
                     </div>
                 </ContainerTask>
 
+                <Line />
+
                 <ContainerTask href="https://02-timer-ignite-rocketseat.vercel.app">
                     <img src={TimerIgnite} alt="Thumb do Site Timer - Ignite" />
                     <div>
@@ -27,12 +29,17 @@ export function Projetos() {
                     </div>
                 </ContainerTask> 
 
+                <Line />
+
                 <ContainerTask href="https://jogo-de-xadrez.vercel.app">
                     <img src={ChessMaster} alt="Thumb do Site Chess Master" />
                     <div>
                         <h3>Chess Master</h3>
                     </div>
                 </ContainerTask>  
+
+                <Line />
+
             </LineProject>
 
             <LineProject>
@@ -43,6 +50,8 @@ export function Projetos() {
                     </div>
                 </ContainerTask>
 
+                <Line />
+
                 <ContainerTask href="https://01-fundamentos-do-react-ignite-rock.vercel.app">
                     <img src={FundamentosIgnite} alt="Thumb do Site Ignite Feed" />
                     <div>
@@ -50,12 +59,17 @@ export function Projetos() {
                     </div>
                 </ContainerTask> 
 
+                <Line />
+
                 <ContainerTask href="https://alura-classes-cartas.vercel.app">
                     <img src={CartasRPG} alt="Thumb do Site Classes RPG" />
                     <div>
                         <h3>Classes RPG</h3>
                     </div>
                 </ContainerTask>  
+
+                <Line />
+
             </LineProject>
 
             <LineProject>
@@ -66,12 +80,16 @@ export function Projetos() {
                     </div>
                 </ContainerTask>
 
+                <Line />
+
                 <ContainerTask href="#">
                     <img src={EmObra} alt="wallpaper amarelo e preto"/>
                     <div>
                         <h3>Em Obra</h3>
                     </div>
                 </ContainerTask> 
+
+                <Line />
 
                 <ContainerTask href="#">
                     <img src={EmObra} alt="wallpaper amarelo e preto" />

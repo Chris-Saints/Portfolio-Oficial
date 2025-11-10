@@ -4,6 +4,12 @@ export const MainContent = styled.main`
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+
+    @media (max-width: 480px) {
+        max-width: 100vw;
+        width: 90%;
+    }
 `
 
 export const ContainerBase = styled.section`

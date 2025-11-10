@@ -23,7 +23,16 @@ export const Containerbase = styled.main`
     @media (max-width: 1280px) {
         max-width: 610px;
     }
-`
+
+    @media (max-width: 480px) {
+        max-width: 100vw;
+        width: 90%;
+
+        h1 {
+            font-size: 55px;
+        }
+    }
+` 
 
 
 
@@ -36,10 +45,28 @@ export const LineProject = styled.div`
 
     padding: 2rem 0;
 
-    border-bottom: solid 3px ${props => props.theme['--yellow']};
-
     &:last-child {
         border-bottom: 0;
+    }
+
+    @media (min-width: 769px) {
+        border-bottom: solid 3px ${props => props.theme['--yellow']};
+    }
+
+    @media (max-width: 480px) {
+
+        flex-direction: column;
+    }
+
+`
+
+export const Line = styled.div`
+    display: none;
+
+    @media (max-width: 480px) {
+        display: flex;
+        width: 100%;
+        border-bottom: solid 3px ${props => props.theme['--yellow']};
     }
 
 `
@@ -87,5 +114,11 @@ export const ContainerTask = styled.a`
         border: solid 5px ${props => props.theme[' --dark-gray']};
         outline: solid 5px ${props => props.theme['--yellow']};
         transform: scale(1.2);
+    }
+
+    @media (max-width: 480px) {
+
+        height: 100%;
+        width: 21.25rem;
     }
 `

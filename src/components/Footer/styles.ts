@@ -13,6 +13,8 @@ export const FooterBase = styled.div`
 
     @media (max-width: 480px) {
         margin-bottom: 4rem;
+
+        width: 100vw;
     }
 
 
