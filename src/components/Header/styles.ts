@@ -53,9 +53,9 @@ export const NavItem = styled(NavLink)`
 
     &.active {
         color: ${props => props.theme["--yellow"]};
+    }
 
-        padding: 0 1rem;
-
+    @media (max-width: 480px) {
         border-radius: 8px;
         border: solid 2px ${props => props.theme["--yellow"]};;
     }
