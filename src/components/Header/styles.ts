@@ -84,7 +84,7 @@ export const NavItem = styled(NavLink)`
     @media (max-width: 480px) {
 
         &:hover {
-            color: ${props => props.theme['--yellow']};
+            color: ${props => props.theme['--light-gray']};
         }
 
     }
