@@ -5,7 +5,7 @@ import DtMoney from "../../assets/dt-money.png"
 import CardsRpg from "../../assets/cartas-rpg.png"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Item, ItemOverlay } from "./styles"
-import 'swiper/css'
+import 'swiper/css';
 
 export function Carrossel() {
     const projetos = [
