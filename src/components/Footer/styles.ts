@@ -8,8 +8,15 @@ export const FooterBase = styled.div`
     font-weight: bold;
     background: ${props => props.theme[' --dark-gray']};
     height: 5.1rem;
-    max-width: auto;
-    width: 100%;
+    max-width: 100vw;
+    width: 1860px;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 8rem;
+
+        max-width: 100vw;
+        width: 900px;
+    }
 
     @media (max-width: 480px) {
         margin-bottom: 4rem;

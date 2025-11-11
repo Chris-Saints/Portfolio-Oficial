@@ -3,9 +3,11 @@ import styled from "styled-components";
 export const Containerbase = styled.main`
     display: flex;
     flex-direction: column;
+    align-items: center;
     box-sizing: border-box;
 
-    width: 100%;
+    max-width: 100vw;
+    width: 50%;
 
     background: ${props => props.theme[' --dark-gray']};
     border-top: solid 5px ${props => props.theme['--yellow']};
@@ -21,12 +23,24 @@ export const Containerbase = styled.main`
     }
 
     @media (max-width: 1280px) {
-        max-width: 610px;
+        max-width: 100vw;
+        width: 80%;
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 100vw;
+        width: 85%;
+        padding: 0 20rem;
+
+        h1 {
+            font-size: 75px;
+        }
     }
 
     @media (max-width: 480px) {
         max-width: 100vw;
         width: 90%;
+        padding: 0 0;
 
         h1 {
             font-size: 55px;
@@ -45,17 +59,26 @@ export const LineProject = styled.div`
 
     padding: 2rem 0;
 
+    border-bottom: solid 3px ${props => props.theme['--yellow']};
+
     &:last-child {
         border-bottom: 0;
     }
 
-    @media (min-width: 769px) {
-        border-bottom: solid 3px ${props => props.theme['--yellow']};
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        border-bottom: 0;
+
+        #obra {
+            display: none;
+        }
     }
+
 
     @media (max-width: 480px) {
 
         flex-direction: column;
+        border-bottom: 0;
 
         #obra {
             display: none;
@@ -66,6 +89,12 @@ export const LineProject = styled.div`
 
 export const Line = styled.div`
     display: none;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        width: 100%;
+        border-bottom: solid 3px ${props => props.theme['--yellow']};
+    }
 
     @media (max-width: 480px) {
         display: flex;
@@ -120,9 +149,50 @@ export const ContainerTask = styled.a`
         transform: scale(1.2);
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1024px) {
+        font-size: 20px;
 
         height: 100%;
+        width: 28.25rem;
+        border: solid 5px ${props => props.theme['--yellow']};
+
+        &:hover{
+            border: solid 5px ${props => props.theme['--yellow']};
+            outline: none;
+            transform: none;
+        }
+
+        img{
+            background: ${props => props.theme['--light-gray']};
+            border-radius: 8px 8px 0 0;
+
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        font-size: 16px;
+        height: 100%;
         width: 21.25rem;
+        border: solid 5px ${props => props.theme['--yellow']};
+
+        &:hover{
+            border: solid 5px ${props => props.theme['--yellow']};
+            outline: none;
+            transform: none;
+        }
+
+        img{
+            background: ${props => props.theme['--light-gray']};
+            border-radius: 8px 8px 0 0;
+
+            height: 9rem;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 390px) {
+        width: 18rem;
     }
 `

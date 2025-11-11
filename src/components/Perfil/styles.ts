@@ -18,6 +18,16 @@ export const BasePerfil = styled.div`
         max-width: 250px;
     }
 
+    @media (max-width: 1024px) {
+        justify-content: center;
+        max-width: 100vw;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
     @media (max-width: 480px) {
         justify-content: center;
         max-width: 100vw;
@@ -25,6 +35,7 @@ export const BasePerfil = styled.div`
         border-radius: 0;
         background: transparent;
         padding: 0;
+        margin-bottom: 2rem;
     }
 
 `
@@ -43,6 +54,14 @@ export const ImgPerfil = styled.img`
     @media (max-width: 1280px) {
         width: 180px;
         height: 180px;
+    }
+
+    @media (max-width: 1024px){
+        outline: solid 7px ${props => props.theme['--yellow']};
+        border: solid 7px ${props => props.theme[' --dark-gray']};
+        width: 450px;
+        height: 450px;
+        border-radius: 100% ;
     }
 
     @media (max-width: 480px){
@@ -84,6 +103,20 @@ export const DivInfo = styled.div`
         }
     }
 
+    @media (max-width: 1024px) {
+        h2{
+            font-size: 60px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        div{
+            margin-top: 0;
+        }
+    }
+
     @media (max-width: 480px) {
         h2{
             font-size: 40px;
@@ -105,6 +138,10 @@ export const NavSocial = styled.nav`
 
     @media (max-width: 1280px) {
         gap: 1rem;
+    }
+
+    @media (max-width: 1024px) {
+        gap: 2.5rem;
     }
 
     @media (max-width: 480px) {
@@ -141,6 +178,18 @@ export const AnchorSocial = styled.a`
         background: ${props => props.theme['--yellow']};
     }
 
+    @media (max-width: 1024px) {
+        background: ${props => props.theme['--yellow']};
+
+        height: 100px;
+        width: 100px;
+
+        img {
+            height: 75px;
+            width: 75px;
+        }
+    }
+
     @media (max-width: 480px) {
         background: ${props => props.theme['--yellow']};
 
@@ -174,11 +223,19 @@ export const ContainerButton = styled.div`
         }
     }
 
+    @media (max-width: 1024px) {
+        width: 25rem;
+        a {
+            text-decoration: none;
+            width: 100%;
+        }
+    }
+
     @media (max-width: 480px) {
         width: 20rem;
         a {
             text-decoration: none;
-            width: 100;
+            width: 100%;
         }
     }
 
@@ -211,6 +268,10 @@ export const ButtonContato = styled.a`
         font-weight: 600;
     }
 
+    @media (max-width: 1024px) {
+        display: none;
+    }
+
     @media (max-width: 480px) {
         display: none;
     }
@@ -223,7 +284,7 @@ export const ButtonCV = styled.button`
 
     border-radius: 9px;
     padding: 0.59rem;
-    border: solid 0.31rem ${props => props.theme['--gray-500']};;
+    border: solid 0.31rem ${props => props.theme['--gray-500']};
     width: 100%;
     font-weight: 600;
 
@@ -233,6 +294,34 @@ export const ButtonCV = styled.button`
         background: ${props => props.theme[' --dark-gray']};
         border: solid 0.31rem ${props => props.theme['--gray-500']};
         font-weight: 600;
+    }
+
+    @media (max-width: 1024px) {
+        background: ${props => props.theme[' --dark-gray']};
+        color: ${props => props.theme['--yellow']};
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 1rem 1;
+        border: solid 0.31rem ${props => props.theme['--yellow']};
+        border-radius: 30px;
+        margin: 0;
+        height: 100px;
+
+        font-size: 40px;
+        font-weight: bold;
+
+        transition: 0.2s;
+
+        cursor: pointer;
+
+
+        &:hover {
+            background: ${props => props.theme['--gray-500']};
+            border: solid 0.31rem ${props => props.theme['--yellow']};
+            font-weight: 600;
+        }
     }
 
     @media (max-width: 480px) {
@@ -255,6 +344,49 @@ export const ButtonCV = styled.button`
 
         cursor: pointer;
 
-        margin-bottom: 2rem;
+
+        &:hover {
+            background: ${props => props.theme['--gray-500']};
+            border: solid 0.31rem ${props => props.theme['--yellow']};
+            font-weight: 600;
+        }
+    }
+`
+
+export const ContatoFixed = styled.a`
+    position: fixed;
+    bottom: 5rem;
+    right: 1rem;
+
+    border-radius: 100%;
+
+    background: ${props => props.theme['--yellow']};
+    height: 70px;
+    width: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px black;
+    z-index: 9999;
+    
+    @media (min-width: 1024px) {
+        bottom: 9rem;
+        right: 1.5rem;
+
+        height: 100px;
+        width: 100px;
+    }
+
+    @media (min-width: 700px) {
+        bottom: 10rem;
+        right: 3rem;
+
+        height: 100px;
+        width: 100px;
+    }
+ 
+    @media (min-width: 1025px) {
+        display: none;
     }
 `

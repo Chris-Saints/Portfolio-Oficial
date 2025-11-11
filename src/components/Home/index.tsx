@@ -1,97 +1,22 @@
-import { BotaoDireito, BotaoEsquerdo, ButtonContato, ButtonIcone, ButtonSobre, ContainerBase, ContainerButton, ContainerExp, ContainerInfo, ContainerProjetos, ContainerSlider, Item, ItemOverlay, MainContainer, MoreProjects, Slider } from "./styles";
+import { ButtonContato, ButtonIcone, ButtonSobre, ContainerBase, ContainerButton, ContainerExp, ContainerInfo, ContainerProjetos, ContainerSlider, MainContainer, MoreProjects } from "./styles";
 import CSSLogo from "../../assets/css.png"
 import HTMLLogo from "../../assets/html.png"
 import TypeLogo from "../../assets/Typescript.png"
 import FigmaLogo from "../../assets/figma.png"
 import ReactLogo from "../../assets/React-Logo.png"
 import { useNavigate } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
-import toDoList from "../../assets/to-do-List.png"
-import TimerIgnite from "../../assets/timer-ignite.png"
-import ChessMaster from "../../assets/chess-master.png"
-import DtMoney from "../../assets/dt-money.png"
-import CardsRpg from "../../assets/cartas-rpg.png"
+import { Carrossel } from "../Swiper/Carrossel";
+
+
 
 
 export function Home() {
     const navigate = useNavigate();
 
-    const [itemWidth, setItemWidth] = useState(0)
-    const [index, setIndex] = useState(0);
-    const ref = useRef<HTMLDivElement>(null);
 
+    
 
-    const projetos = [
-        {
-            nome: "To-Do List",
-            id: 1,
-            img: toDoList
-        },
-        {
-            nome: "Timer Ignite",
-            id: 2,
-            img: TimerIgnite
-        },
-        {
-            nome: "Chess Master",
-            id: 3,
-            img: ChessMaster
-        },
-        {
-            nome: "Dt-Money",
-            id: 4,
-            img: DtMoney
-        },
-        {
-            nome: "Cards Classes",
-            id: 5,
-            img: CardsRpg
-        }
-    ]
-
-    const [visible, setVisible] = useState(3);
-
-    useEffect(() => {
-        function updateVisible() {
-            if(window.innerWidth <= 480) {
-                setVisible(1);
-            } else {
-                setVisible(3)
-            }
-        }
-
-        updateVisible();
-        window.addEventListener("resize", updateVisible);
-        return () => window.removeEventListener("resize", updateVisible)
-    }, [])
-
-    const maxIndex = projetos.length - visible
-
-    useEffect(() => {
-        function updateItemWidth() {
-            if(ref.current) {
-                const firstItem = ref.current.querySelector("div");
-                if (firstItem) {
-                    const width = firstItem.clientWidth + 8;
-                    setItemWidth(width);
-                }
-            }
-        }
-
-        updateItemWidth();
-        window.addEventListener("resize", updateItemWidth)
-
-        return () => window.removeEventListener("resize", updateItemWidth)
-    }, [])
-
-    function next() {
-            setIndex(prev => Math.min(prev + 1, maxIndex));
-    }
-
-    function prev() {
-        setIndex(prev => Math.max(prev - 1, 0))
-    }
-
+  
     return (
         <MainContainer>
             <ContainerBase>
@@ -108,8 +33,8 @@ export function Home() {
                         <ButtonIcone><img src={HTMLLogo} alt="Logo HTML"/></ButtonIcone>
                         <ButtonIcone><img src={CSSLogo} alt="Logo CSS" /></ButtonIcone>
                         <ButtonIcone><img src={TypeLogo} alt="Logo Typescript" /></ButtonIcone>
-                        <ButtonIcone><img src={FigmaLogo} alt="Logo Figma" /></ButtonIcone>
-                        <ButtonIcone><img src={ReactLogo} alt="Logo React" /></ButtonIcone>
+                        <ButtonIcone><img id="imgFigma"src={FigmaLogo} alt="Logo Figma" /></ButtonIcone>
+                        <ButtonIcone><img id="imgReact" src={ReactLogo} alt="Logo React" /></ButtonIcone>
                     </div>
 
                     <h2>ESPECIALIZAÇÕES</h2>
@@ -128,20 +53,10 @@ export function Home() {
             <ContainerProjetos id="containerProjeto">
                 <h2>DESTAQUES</h2>
                 <ContainerSlider>
-                    <BotaoEsquerdo onClick={prev} >{"<"}</BotaoEsquerdo>
-                    <Slider ref={ref} translate={-index * itemWidth}>
-                        {projetos.map((projeto) => (
-                            <Item key={projeto.id} >
-                                <img
-                                    src={projeto.img}
-                                    alt={projeto.nome} 
-                                 />
-                                 <ItemOverlay>{projeto.nome}</ItemOverlay>
-                             </Item>
-                        ))}
-                    </Slider>
-                    <BotaoDireito onClick={next} >{">"}</BotaoDireito>
+
+                    <Carrossel />
                 </ContainerSlider>
+
                 <MoreProjects onClick={() => navigate("projetos")}>Mais projetos</MoreProjects>
             </ContainerProjetos>
         </MainContainer>

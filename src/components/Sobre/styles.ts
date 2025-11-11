@@ -5,6 +5,13 @@ export const MainContent = styled.main`
     flex-direction: column;
     gap: 2rem;
 
+    max-width: 100vw;
+    width: 50%;
+
+    @media (max-width: 1024px) {
+        max-width: 100vw;
+        width: 85%;
+    }
 
     @media (max-width: 480px) {
         max-width: 100vw;
@@ -32,6 +39,16 @@ export const ContainerBase = styled.section`
         color: ${props => props.theme['--light-gray']};
     }
 
+    @media (max-width: 1024px) {
+        h1 {
+            font-size: 65px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+    }
+
     @media (max-width: 480px) {
         h1 {
             font-size: 55px;
@@ -41,15 +58,23 @@ export const ContainerBase = styled.section`
             font-size: 18px;
         }
     }
+
+    @media (max-width: 390px) {
+        h1 {
+            font-size: 55px;
+        }
+    }
 `
 
 export const SectionExpForm = styled.section`
     display: flex;
     gap: 2rem;
 
-    @media (max-width: 480px) {
+    @media (max-width: 1024px) {
         flex-direction: column;
     }
+
+
 `
 
 export const ContainerBaseExpForm = styled.div`
@@ -70,9 +95,21 @@ export const ContainerBaseExpForm = styled.div`
         font-size: 30px;
     }
 
+    @media (max-width: 1024px) {
+        h2 {
+            font-size: 65px;
+        }
+    }
+
     @media (max-width: 480px) {
         h2 {
             font-size: 55px;
+        }
+    }
+
+    @media (max-width: 390px) {
+        h2 {
+            font-size: 42px;
         }
     }
 `
@@ -84,9 +121,23 @@ export const ContainerExpFormacao = styled.div`
         color: ${props => props.theme['--light-gray']};
     }
 
+    @media (max-width: 1024px) {
+        p {
+            font-size: 25px;
+        }
+
+        h3 {
+            font-size: 23px;
+        }
+    }
+
     @media (max-width: 480px) {
         p {
             font-size: 18px;
+        }
+
+        h3 {
+            font-size: 20px;
         }
     }
 
@@ -109,6 +160,18 @@ export const ContainerEspecializacao = styled.div`
 
     span {
         font-weight: 900;
+    }
+
+    @media (max-width: 1024px) {
+        p {
+            font-size: 30px;
+        }
+
+        span {
+            font-weight: 900;
+            font-size: 30px;
+        }
+        
     }
 
     @media (max-width: 480px) {
@@ -140,11 +203,26 @@ export const ContainerEspecializacaoBase = styled.section`
         font-size: 30px;
     }
 
+    @media (max-width: 1024px) {
+        padding-bottom: 3rem;
+
+        h2 {
+            font-size: 65px;
+        }
+    }
+
     @media (max-width: 480px) {
         padding-bottom: 3rem;
 
         h2 {
-            font-size: 55px;
+            font-size: 47px;
         }
     }
+
+    @media (max-width: 390px) {
+        h2 {
+            font-size: 42px;
+        }
+    }
+
 `

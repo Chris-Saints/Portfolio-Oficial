@@ -7,6 +7,9 @@ export const MainContainer = styled.main`
 
     padding-bottom: 3rem;
 
+    max-width: 100vw;
+    width: 50%;
+
     gap: 2rem;
     
 
@@ -14,10 +17,17 @@ export const MainContainer = styled.main`
         max-width: 610px;
     }
 
+    @media (max-width: 1024px) {
+        max-width: 100vw;
+        width: 85%;
+    }
+
     @media (max-width: 480px) {
         max-width: 100vw;
         width: 90%;
     }
+
+
 ` 
 
 export const ContainerBase = styled.section`
@@ -43,6 +53,17 @@ export const ContainerBase = styled.section`
         font-size: 50px;
     }
 
+    @media (max-width: 1024px) {
+        h1 {
+            font-size: 65px;
+            line-height: 1;
+        }
+
+        p {
+            font-size: 25px;
+        }
+    }
+
     @media (max-width: 480px) {
         h1 {
             font-size: 55px;
@@ -55,6 +76,13 @@ export const ContainerBase = styled.section`
 
     }
 
+    @media (max-width: 390px) {
+        h1 {
+            font-size: 49px;
+        }
+    }
+
+    
 `
 
 export const ContainerExp = styled.div`
@@ -82,6 +110,18 @@ export const ContainerExp = styled.div`
     h2{
         font-size: 40px;
     }
+
+    @media (max-width: 1024px) {
+        padding-top: 0.5rem ;
+        padding-bottom: 1rem;
+        align-items: center;
+
+        h2 {
+            order: -1;
+            font-size: 75px;
+            letter-spacing: 0.3rem;
+        }
+    }
     
     @media (max-width: 480px) {
         padding-top: 0.5rem ;
@@ -90,7 +130,14 @@ export const ContainerExp = styled.div`
 
         h2 {
             order: -1;
-            font-size: 52px;
+            font-size: 50px;
+            letter-spacing: 0;
+        }
+    }
+
+    @media (max-width: 390px) {
+        h2 {
+            font-size: 44px;
         }
     }
 
@@ -105,6 +152,7 @@ export const ContainerInfo = styled.section`
     @media (max-width: 1280px) {
         flex-direction: column;
     }
+
 
 `
 
@@ -133,16 +181,85 @@ export const ButtonIcone = styled.div`
         border-radius: 8px;
     }
 
-    @media (max-width: 480px) {
+    #imgReact {
+        height: 4rem;
+        width: 4.5rem;
+    }
 
-        height: 150px;
+    #imgFigma {
+        border-radius: 20px;
+    }
+
+    @media (max-width: 1024px) {
+
+        height: 250px;
+        width: 250px;
+
+        img {
+            height: 10rem;
+            width: 10rem;
+        }
+
+        #imgReact {
+            height: 10rem;
+            width: 10.5rem;
+        }
+
+        #imgFigma {
+            border-radius: 20px;
+        }
+
+        &:hover{
+            transform: scale(1);
+        }
+    }
+
+    @media (max-width: 950px) {
         width: 150px;
+        height: 150px; 
 
         img {
             height: 5rem;
             width: 5rem;
         }
+
+        #imgReact {
+            height: 5rem;
+            width: 5.5rem;
+        }
+
+        #imgFigma {
+            border-radius: 20px;
+        }
     }
+
+    @media (max-width: 480px) {
+
+        height: 140px;
+        width: 140px;
+
+        img {
+            height: 5rem;
+            width: 5rem;
+        }
+
+        #imgReact {
+            height: 5rem;
+            width: 5.5rem;
+        }
+
+        #imgFigma {
+            border-radius: 20px;
+        }
+
+        &:hover{
+            transform: scale(1);
+        }
+    }
+
+
+
+    
 `
 
 export const ContainerButton = styled.div`
@@ -154,6 +271,10 @@ export const ContainerButton = styled.div`
     @media (max-width: 1280px) {
         flex-direction: row;
         gap: 0;
+    }
+
+    @media (max-width: 1024px) {
+        display: none;
     }
 
     @media (max-width: 480px) {
@@ -221,140 +342,80 @@ export const ButtonSobre = styled.button`
 export const ContainerProjetos = styled.section`
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-
     background: ${props => props.theme[' --dark-gray']};
     border-top: solid 5px ${props => props.theme['--yellow']};
     border-radius: 8px;
 
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 1rem 1rem 2rem ;
 
     h2{
         font-size: 40px;
-        letter-spacing: 0.5rem;
+        letter-spacing: 0.3rem;
     }
 
+    @media (max-width: 1024px) {
+        padding: 1rem 1rem 2rem ;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            font-size: 75px;
+            letter-spacing: 0.9rem;
+        }
+    }
+    @media (max-width: 768px) {
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+
     @media (max-width: 480px) {
+        padding: 1rem 1rem 2rem ;
+        align-items: center;
+        justify-content: center;
+
         h2 {
             font-size: 55px;
+            letter-spacing: 0;
+        }
+    }
+
+    @media (max-width: 390px) {
+        h2 {
+            font-size: 49px;
+            letter-spacing: 0;
         }
     }
 
 `
 
 export const ContainerSlider = styled.section`
+    max-width: 100vw;
     width: 100%;
     overflow: hidden;
-    position: relative;
     background: ${props => props.theme['--gray-500']};
     border-radius: 6px;
+    padding: 0 0.5rem;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        height: 15rem;
+        align-items: center;
+
+    }
 
     @media (max-width: 480px) {
+        
         height: 15rem;
         display: flex;
         align-items: center;
 
     }
-`
-
-export const BotaoEsquerdo = styled.button`
-    position: absolute;
-
-    top: 50%;
-    transform: translateY(-50%);
-    background: ${props => props.theme['--yellow']};
-    border: none;
-    border-radius: 50%;
-    color: ${props => props.theme[' --dark-gray']};
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 0 0.75rem 0.1rem 0.7rem;
-    cursor: pointer;
-    z-index: 2;
-    left: 0.2rem;
-
-    &:hover {
-        opacity: 80%;
-    }
 
 `
 
-export const BotaoDireito = styled.button`
-    position: absolute;
 
-    top: 50%;
-    transform: translateY(-50%);
-    background: ${props => props.theme['--yellow']};
-    border: none;
-    border-radius: 50%;
-    color: ${props => props.theme[' --dark-gray']};
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 0 0.75rem 0.1rem 0.7rem;
-    cursor: pointer;
-    z-index: 2;
-    right: 0.2rem;
-
-    &:hover {
-        opacity: 80%;
-    }
-`
-
-interface SliderProps {
-  translate: number;
-}
-
-export const Slider = styled.div<SliderProps>`
-  display: flex;
-  transition: transform 1s ease;
-  transform: ${({ translate }) => `translateX(${translate}px)`};
-
-    padding: 1rem ;
-
-
-`
-
-export const Item = styled.div`
-    display: flex;
-    position: relative;
-
-    flex: 0 0 auto;
-    width: 30%; /* mostra 3 por vez aproximadamente */
-    aspect-ratio: 16 / 9;
-    margin: 0 0.5rem;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: 0.2s;
-
-    &:hover {
-        transform: scale(1.1);
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.4s ease;
-    }
-
-    &:hover img {
-        border:  solid 3px ${props => props.theme['--yellow']};
-    }
-
-    &:hover > div {
-        opacity: 1;
-        transform: translateY(0);
-        border-bottom:  solid 3px ${props => props.theme['--yellow']};
-        border-right:  solid 3px ${props => props.theme['--yellow']};
-        border-left:  solid 3px ${props => props.theme['--yellow']};
-    }
-
-    @media (max-width: 480px) {
-        width: 100%;
-
-    }
-`
 
 export const MoreProjects = styled.button`
     width: 20%;
@@ -375,32 +436,29 @@ export const MoreProjects = styled.button`
         background: ${props => props.theme[' --dark-gray']};
     }
 
+    @media (max-width: 1024px) {
+        width: 100%;
+        margin: 2rem 0 0;
+        padding: 0.5rem 0;
+        font-size: 30px;
+        &:hover {
+            
+            color: ${props => props.theme[' --dark-gray']};
+            background: ${props => props.theme['--yellow']}; 
+        }
+    }
+
     @media (max-width: 480px) {
         width: 100%;
-
+        margin: 1rem 0 0;
+        padding: 0%.5 0;
+        font-size: 18px;
+        
         &:hover {
+            
             color: ${props => props.theme[' --dark-gray']};
             background: ${props => props.theme['--yellow']}; 
         }
     }
 `
-
-export const ItemOverlay = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 12px;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(6px);
-  color: ${props => props.theme['--yellow']};
-  text-align: center;
-  opacity: 30%;
-  transform: translateY(100%);
-  transition: all 0.4s ease;
-  border-radius: 0 0 12px 12px;
-  font-weight: bold;
-  font-size: 1rem;
-  
-` 
 

@@ -1,12 +1,32 @@
-import { AnchorSocial, BasePerfil, ButtonContato, ButtonCV, ContainerButton, DivInfo, ImgPerfil, NavSocial } from "./styles";
+import { AnchorSocial, BasePerfil, ButtonContato, ButtonCV, ContainerButton, ContatoFixed, DivInfo, ImgPerfil, NavSocial } from "./styles";
 import FotoPerfil from "../../assets/Foto1.jpg"
 import InstagramLogo from "../../assets/instragam.webp"
 import LinkedInLogo from "../../assets/linkedin.png"
 import GithubLogo from "../../assets/GitHub.png"
+import { useEffect, useState } from "react";
+import { Envelope } from "phosphor-react";
 
 
 
 export function Perfil() {
+
+    const [visible, setVisible] = useState(3);
+  
+    useEffect(() => {
+      function updateVisible() {
+        if(window.innerWidth <= 480) {
+          setVisible(40);
+        }else if(window.innerWidth <= 900) {
+          setVisible(50)
+        } else if(window.innerWidth <= 1024) {
+          setVisible(60)
+        }   
+      }
+
+      updateVisible();
+      window.addEventListener("resize", updateVisible);
+      return () => window.removeEventListener("resize", updateVisible)
+    }, [])
 
     return (
         <BasePerfil>
@@ -43,6 +63,8 @@ export function Perfil() {
                 </a>
 
             </ContainerButton> 
+
+            <ContatoFixed href="mailto:christianpicoli18@gmail.com"><Envelope color={"black"} size={visible} /></ContatoFixed>
 
         </BasePerfil>
     )
