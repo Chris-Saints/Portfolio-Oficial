@@ -6,6 +6,7 @@ import FigmaLogo from "../../assets/figma.png"
 import ReactLogo from "../../assets/React-Logo.png"
 import { useNavigate } from "react-router-dom";
 import { Carrossel } from "../Swiper/Carrossel";
+import { CaretLeft, CaretRight } from "phosphor-react";
 
 
 
@@ -54,7 +55,13 @@ export function Home() {
                 <h2>DESTAQUES</h2>
                 <ContainerSlider>
 
+                    <CaretLeft id="caretleft" color="#ffd900" weight="bold" size={30} />
+                    
+
                     <Carrossel />
+
+                    <CaretRight id="caretright" color="#ffd900" weight="bold" size={30} />
+                    
                 </ContainerSlider>
 
                 <MoreProjects onClick={() => navigate("projetos")}>Mais projetos</MoreProjects>

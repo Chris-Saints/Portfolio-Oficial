@@ -137,7 +137,7 @@ export const ContainerExp = styled.div`
 
     @media (max-width: 390px) {
         h2 {
-            font-size: 44px;
+            font-size: 40px;
         }
     }
 
@@ -258,6 +258,30 @@ export const ButtonIcone = styled.div`
     }
 
 
+    @media (max-width: 420px) {
+        height: 100px;
+        width: 100px;
+
+        img {
+            height: 4rem;
+            width: 4rem;
+        }
+
+        #imgReact {
+            height: 4rem;
+            width: 4.5rem;
+        }
+
+        #imgFigma {
+            border-radius: 20px;
+        }
+
+        &:hover{
+            transform: scale(1);
+        }
+    }
+
+
 
     
 `
@@ -345,6 +369,8 @@ export const ContainerProjetos = styled.section`
     background: ${props => props.theme[' --dark-gray']};
     border-top: solid 5px ${props => props.theme['--yellow']};
     border-radius: 8px;
+    align-items: center;
+    justify-content: center;
 
     padding: 1rem 1rem 2rem ;
 
@@ -355,8 +381,7 @@ export const ContainerProjetos = styled.section`
 
     @media (max-width: 1024px) {
         padding: 1rem 1rem 2rem ;
-        align-items: center;
-        justify-content: center;
+        
 
         h2 {
             font-size: 75px;
@@ -390,7 +415,11 @@ export const ContainerProjetos = styled.section`
 
 `
 
+
+
+
 export const ContainerSlider = styled.section`
+    position: relative;
     max-width: 100vw;
     width: 100%;
     overflow: hidden;
@@ -411,6 +440,22 @@ export const ContainerSlider = styled.section`
         display: flex;
         align-items: center;
 
+    }
+
+    #caretleft {
+        position: absolute;
+        top: 48%;
+        transform: translateY(-50%);
+        z-index: 10;
+        left: 10px;
+    }
+
+    #caretright{
+        position: absolute;
+        top: 48%;
+        transform: translateY(-50%);
+        z-index: 10;
+        right: 10px;
     }
 
 `

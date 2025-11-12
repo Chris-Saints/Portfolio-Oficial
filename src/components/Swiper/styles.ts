@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
 export const Item = styled.div`
+
     border-radius: 8px;
     overflow: hidden;
     object-fit: cover;
@@ -49,3 +50,5 @@ export const ItemOverlay = styled.div`
   font-size: 1rem;
   
 ` 
+
+

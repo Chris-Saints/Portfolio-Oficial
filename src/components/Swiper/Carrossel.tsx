@@ -4,8 +4,10 @@ import ChessMaster from "../../assets/chess-master.png"
 import DtMoney from "../../assets/dt-money.png"
 import CardsRpg from "../../assets/cartas-rpg.png"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Item, ItemOverlay } from "./styles"
+
 import 'swiper/css';
+import { Item, ItemOverlay } from "./styles"
+
 
 export function Carrossel() {
     const projetos = [
@@ -49,6 +51,8 @@ export function Carrossel() {
             grabCursor={true}
             loop={false}
         >
+
+
             {projetos.map((projeto) => (
                 <SwiperSlide key={projeto.nome}>
                     <Item>
