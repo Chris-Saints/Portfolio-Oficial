@@ -87,6 +87,34 @@ export const LineProject = styled.div`
 
 `
 
+export const ProjectContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+`
+
+export const CodeContainer = styled.a`
+    background-color: ${props => props.theme['--gray-500']};
+    border: solid 3px ${props => props.theme['--light-gray']};
+    color: ${props => props.theme["--white"]};
+
+    border-radius: 8px;
+    font-weight: 600;
+
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 0.2rem;
+
+    transition: 0.2s;
+    
+    &&:hover{
+        background-color: ${props => props.theme['--light-gray']};
+        color: ${props => props.theme[" --dark-gray"]};
+    }
+`
+
 export const Line = styled.div`
     display: none;
 
