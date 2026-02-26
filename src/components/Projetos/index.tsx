@@ -15,29 +15,29 @@ export function Projetos() {
         <Containerbase>
             <h1>PROJETOS</h1>
             <LineProject>
-                <ProjectContainer>
-                    <ContainerTask id="to-do-list" href="https://00-to-do-list-ignite.vercel.app">
-                        <img src= {ToDoList} alt="Thumb do site To-do List" />
-                        <div>
-                            <h3>To-do List</h3>
-                        </div>
-                        
-                    </ContainerTask>
 
-                    <CodeContainer href='https://github.com/Chris-Saints/00-To-do-List-Ignite'>Código do projeto</CodeContainer>
-                </ProjectContainer>
+                <ProjectContainer>
+                    <ContainerTask id="pokedexyz" href="https://pokedexyz-alpha.vercel.app">
+                        <img src={Pokedexyz} alt="Wallpaper Pokedex" />
+                        <div>
+                            <h3>Pokedexyz</h3>
+                        </div>
+                    </ContainerTask>
+                    <CodeContainer href='https://github.com/Chris-Saints/Pokedexyz'>Código do projeto</CodeContainer>
+                </ProjectContainer> 
 
                 <Line />
 
                 <ProjectContainer>
-                    <ContainerTask id="timer-ignite" href="https://02-timer-ignite-rocketseat.vercel.app">
-                        <img src={TimerIgnite} alt="Thumb do Site Timer - Ignite" />
+                    <ContainerTask id="dt-money" href="https://03-dt-money-rocket-seat.vercel.app">
+                        <img src={DtMoney} alt="Thumb do Site Dt-Money"/>
                         <div>
-                            <h3>Timer - Ignite</h3>
+                            <h3>Dt-Money</h3>
                         </div>
-                    </ContainerTask> 
-                    <CodeContainer href='https://github.com/Chris-Saints/02-Timer-Ignite-RocketSeat'>Código do projeto</CodeContainer>
+                    </ContainerTask>
+                    <CodeContainer href='https://github.com/Chris-Saints/03-dt-money-RocketSeat'>Código do projeto</CodeContainer>
                 </ProjectContainer>
+
 
                 <Line />
 
@@ -53,70 +53,14 @@ export function Projetos() {
 
                 <Line />
 
-            </LineProject>
 
-            <LineProject>
-                <ProjectContainer>
-                    <ContainerTask id="assistente-ia" href="https://assistente-de-meta-com-ia-gemini.vercel.app">
-                        <img src={AssistenteIA} alt="Thumb do Site de Assistente de IA"/>
-                        <div>
-                            <h3>Assistente IA Gemini</h3>
-                        </div>
-                    </ContainerTask>
-                    <CodeContainer href='https://github.com/Chris-Saints/Assistente-de-Meta-com-IA-Gemini'>Código do projeto</CodeContainer>
-                </ProjectContainer>
+                
 
-                <Line />
-                <ProjectContainer>
-                    <ContainerTask id="ignite-feed" href="https://01-fundamentos-do-react-ignite-rock.vercel.app">
-                        <img src={FundamentosIgnite} alt="Thumb do Site Ignite Feed" />
-                        <div>
-                            <h3>Ignite Feed</h3>
-                        </div>
-                    </ContainerTask> 
-                    <CodeContainer href='https://github.com/Chris-Saints/01-Fundamentos-do-React-Ignite-RocketSeat'>Código do projeto</CodeContainer>
-                </ProjectContainer>
-
-                <Line />
-                <ProjectContainer>
-                    <ContainerTask id="classes-rpg" href="https://alura-classes-cartas.vercel.app">
-                        <img src={CartasRPG} alt="Thumb do Site Classes RPG" />
-                        <div>
-                            <h3>Classes RPG</h3>
-                        </div>
-                    </ContainerTask> 
-                    <CodeContainer href='https://github.com/Chris-Saints/Alura-Classes-Cartas'>Código do projeto</CodeContainer>
-                </ProjectContainer> 
-
-                <Line />
+                
 
             </LineProject>
 
             <LineProject>
-                <ProjectContainer>
-                    <ContainerTask id="dt-money" href="https://03-dt-money-rocket-seat.vercel.app">
-                        <img src={DtMoney} alt="Thumb do Site Dt-Money"/>
-                        <div>
-                            <h3>Dt-Money</h3>
-                        </div>
-                    </ContainerTask>
-                    <CodeContainer href='https://github.com/Chris-Saints/03-dt-money-RocketSeat'>Código do projeto</CodeContainer>
-                </ProjectContainer>
-
-
-                <Line />
-
-                <ProjectContainer>
-                    <ContainerTask id="pokedexyz" href="https://pokedexyz-alpha.vercel.app">
-                        <img src={Pokedexyz} alt="Wallpaper Pokedex" />
-                        <div>
-                            <h3>Pokedexyz</h3>
-                        </div>
-                    </ContainerTask>
-                    <CodeContainer href='https://github.com/Chris-Saints/Pokedexyz'>Código do projeto</CodeContainer>
-                </ProjectContainer> 
-
-                <Line />
 
                 <ProjectContainer>
                     <ContainerTask id="coffee-delivery" href="https://coffee-delivery-sigma-one.vercel.app">
@@ -129,6 +73,77 @@ export function Projetos() {
                 </ProjectContainer>
 
                 <Line />
+
+                <ProjectContainer>
+                    <ContainerTask id="assistente-ia" href="https://assistente-de-meta-com-ia-gemini.vercel.app">
+                        <img src={AssistenteIA} alt="Thumb do Site de Assistente de IA"/>
+                        <div>
+                            <h3>Assistente IA Gemini</h3>
+                        </div>
+                    </ContainerTask>
+                    <CodeContainer href='https://github.com/Chris-Saints/Assistente-de-Meta-com-IA-Gemini'>Código do projeto</CodeContainer>
+                </ProjectContainer>
+
+                <Line />
+
+                <ProjectContainer>
+                    <ContainerTask id="timer-ignite" href="https://02-timer-ignite-rocketseat.vercel.app">
+                        <img src={TimerIgnite} alt="Thumb do Site Timer - Ignite" />
+                        <div>
+                            <h3>Timer - Ignite</h3>
+                        </div>
+                    </ContainerTask> 
+                    <CodeContainer href='https://github.com/Chris-Saints/02-Timer-Ignite-RocketSeat'>Código do projeto</CodeContainer>
+                </ProjectContainer>
+
+                <Line />
+                
+                
+
+            </LineProject>
+
+            <LineProject>
+
+                <ProjectContainer>
+                    <ContainerTask id="to-do-list" href="https://00-to-do-list-ignite.vercel.app">
+                        <img src= {ToDoList} alt="Thumb do site To-do List" />
+                        <div>
+                            <h3>To-do List</h3>
+                        </div>
+                        
+                    </ContainerTask>
+
+                    <CodeContainer href='https://github.com/Chris-Saints/00-To-do-List-Ignite'>Código do projeto</CodeContainer>
+                </ProjectContainer>
+
+                <Line />
+                
+                <ProjectContainer>
+                    <ContainerTask id="ignite-feed" href="https://01-fundamentos-do-react-ignite-rock.vercel.app">
+                        <img src={FundamentosIgnite} alt="Thumb do Site Ignite Feed" />
+                        <div>
+                            <h3>Ignite Feed</h3>
+                        </div>
+                    </ContainerTask> 
+                    <CodeContainer href='https://github.com/Chris-Saints/01-Fundamentos-do-React-Ignite-RocketSeat'>Código do projeto</CodeContainer>
+                </ProjectContainer>
+
+                <Line />
+
+                <ProjectContainer>
+                    <ContainerTask id="classes-rpg" href="https://alura-classes-cartas.vercel.app">
+                        <img src={CartasRPG} alt="Thumb do Site Classes RPG" />
+                        <div>
+                            <h3>Classes RPG</h3>
+                        </div>
+                    </ContainerTask> 
+                    <CodeContainer href='https://github.com/Chris-Saints/Alura-Classes-Cartas'>Código do projeto</CodeContainer>
+                </ProjectContainer> 
+
+                <Line />
+                
+
+                
 
             </LineProject>
 

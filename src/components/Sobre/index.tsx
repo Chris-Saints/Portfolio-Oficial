@@ -1,10 +1,10 @@
 import { ContainerBase, ContainerBaseExpForm, ContainerEspecializacao, ContainerEspecializacaoBase, ContainerExpFormacao, MainContent, SectionExpForm } from "./styles";
 
-import BarraReact from "../../assets/barraReact.svg"
-import BarraCSS from "../../assets/barraCSS.svg"
-import BarraTypeScript from "../../assets/barraTypeScript.svg"
-import BarraJavaScript from "../../assets/barraJavaScript.svg"
-import BarraFigma from "../../assets/barraFigma.svg"
+import BarraReact from "../../assets/react-barra.svg"
+import BarraCSS from "../../assets/css-barra.svg"
+import BarraTypeScript from "../../assets/typescript-barra.svg"
+import BarraJavaScript from "../../assets/javascript-barra.svg"
+import BarraFigma from "../../assets/figma-barra.svg"
 
 export function Sobre() {
     return(
@@ -55,9 +55,9 @@ export function Sobre() {
 
                 <ContainerEspecializacao>
                     <div>
-                        <p>React Js</p>
+                        <p>React</p>
 
-                        <span>30%</span>
+                        <span>68%</span>
                     </div>
 
                     <img src={BarraReact} /> 
@@ -67,7 +67,7 @@ export function Sobre() {
                     <div>
                         <p>TypeScript</p>
 
-                        <span>50%</span>
+                        <span>72%</span>
                     </div>
 
                     <img src={BarraTypeScript} /> 
@@ -78,7 +78,7 @@ export function Sobre() {
                     <div>
                         <p>JavaScript</p>
 
-                        <span>57%</span>
+                        <span>75%</span>
                     </div>
 
 
@@ -91,7 +91,7 @@ export function Sobre() {
                     <div>
                         <p>CSS</p>
 
-                        <span>55%</span>
+                        <span>85%</span>
                     </div>
 
 
@@ -104,7 +104,7 @@ export function Sobre() {
                     <div>
                         <p>Figma</p>
 
-                        <span>60%</span>
+                        <span>80%</span>
                     </div>
 
                     <img src={BarraFigma} /> 
