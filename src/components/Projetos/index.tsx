@@ -9,6 +9,7 @@ import DtMoney from "../../assets/dt-money.png"
 import EmObra from "../../assets/emobras.jpg"
 import Pokedexyz from "../../assets/pokedexyz.png"
 import CoffeeDelivery from "../../assets/coffee-delivery.png"
+import GithubBlog from "../../assets/githubthumb.png"
 
 export function Projetos() {
     return (
@@ -105,6 +106,19 @@ export function Projetos() {
             <LineProject>
 
                 <ProjectContainer>
+                    <ContainerTask id="github-blog" href="https://github-blog-black-pi.vercel.app">
+                        <img src={GithubBlog} alt="Thumb github Blog"/>
+                        <div>
+                            <h3>Github Blog</h3>
+                        </div>
+                    </ContainerTask> 
+                    <CodeContainer href='https://github.com/Chris-Saints/Github-Blog'>Código do projeto</CodeContainer>
+                </ProjectContainer>
+        
+
+                <Line />
+
+                <ProjectContainer>
                     <ContainerTask id="to-do-list" href="https://00-to-do-list-ignite.vercel.app">
                         <img src= {ToDoList} alt="Thumb do site To-do List" />
                         <div>
@@ -130,6 +144,13 @@ export function Projetos() {
 
                 <Line />
 
+                
+
+            </LineProject>
+
+            <LineProject>
+
+                
                 <ProjectContainer>
                     <ContainerTask id="classes-rpg" href="https://alura-classes-cartas.vercel.app">
                         <img src={CartasRPG} alt="Thumb do Site Classes RPG" />
@@ -140,25 +161,6 @@ export function Projetos() {
                     <CodeContainer href='https://github.com/Chris-Saints/Alura-Classes-Cartas'>Código do projeto</CodeContainer>
                 </ProjectContainer> 
 
-                <Line />
-                
-
-                
-
-            </LineProject>
-
-            <LineProject>
-
-
-                <ProjectContainer>
-                    <ContainerTask id="obra" href="#">
-                        <img src={EmObra} alt="Thumb github Blog"/>
-                        <div>
-                            <h3>Em Obra</h3>
-                        </div>
-                    </ContainerTask> 
-                    {/* <CodeContainer href='https://github.com/Chris-Saints/Github-Blog'>Código do projeto</CodeContainer> */}
-                </ProjectContainer>
 
 
                 <ProjectContainer>
